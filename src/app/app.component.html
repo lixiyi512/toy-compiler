@@ -18,27 +18,29 @@
     <button class="myButton">Calculate</button>
   </div>
 
-  <div class="valid">{{ validationMsg }}</div>
-  <div class="output">{{ inputText | json }}</div>
+  <div [ngClass]="getValidationClass()">{{ validationMsg }}</div>
+  
 
-  <div class="ast-container" *ngIf="isValid">
-    <h3>Abstract syntax tree</h3>
-    <div class="ast">
-      <div class="ast-level" *ngFor="let level of ASTTemplate">
-        <span class="ast-node" [ngClass]="" *ngFor="let node of level">{{ node + ' ' }}</span>
+  <div class="display">
+    <div class="ast-container">
+      <h3>Abstract syntax tree</h3>
+      <div class="ast" id="ast"></div>
+    </div>
+  
+    <div class="output-section">
+      <div class="expression">
+        <h3>Math expression: {{ expression }}</h3>
+        
+      </div>
+    
+      <div class="result">
+        <h3>Result: {{ result }}</h3>
+        
       </div>
     </div>
   </div>
-
-  <div class="expression">
-    <h3>Math expression: </h3>
-    {{ expression }}
-  </div>
-
-  <div class="result">
-    <h3>Result: </h3>
-    {{ result }}
-  </div>
+  
+  
 
 
 

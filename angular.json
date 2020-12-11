@@ -28,9 +28,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.less"
+              "src/styles.less",
+              "src/assets/Treant.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/Treant.js",
+              "src/assets/raphael.js"
+            ]
           },
           "configurations": {
             "production": {
